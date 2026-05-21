@@ -1,0 +1,12 @@
+<h2>Students</h2>
+
+<input [(ngModel)]="studentName" placeholder="Enter name">
+
+<button (click)="addStudent()">Add</button>
+
+<ul>
+  <li *ngFor="let s of students; let i = index">
+    {{ s }}
+    <button (click)="deleteStudent(i)">Delete</button>
+  </li>
+</ul>
